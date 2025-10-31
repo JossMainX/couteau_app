@@ -1,0 +1,39 @@
+name: couteau_app
+description: "Aplicación multifuncional tipo caja de herramientas."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.13.6
+  provider: ^6.0.0
+  cached_network_image: ^3.2.0
+  url_launcher: ^6.1.0
+  audioplayers: ^6.0.0
+  qr_flutter: ^4.0.0
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.1 # ← Version actual compatible
+
+# Configuración del icono de la app
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icono_app.png" # ← Asegúrate que este archivo exista
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/images/
+    - assets/sounds/

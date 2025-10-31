@@ -1,8 +1,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:label="couteau_app"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+        <!-- ✅ PERMITIR HTTP SI LA API NO TIENE SSL -->
+        android:usesCleartextTraffic="true"
+
+        <!-- ✅ REFERENCIA PARA POLÍTICA DE SEGURIDAD -->
+        android:networkSecurityConfig="@xml/network_security_config"
+        >
         <activity
             android:name=".MainActivity"
             android:exported="true"
